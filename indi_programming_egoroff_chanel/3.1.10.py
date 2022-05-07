@@ -18,3 +18,5 @@ if __name__ == '__main__':
         print(n // 2)
     else:
         print(n // (-2))
+
+    print(sum_numbers(n))
