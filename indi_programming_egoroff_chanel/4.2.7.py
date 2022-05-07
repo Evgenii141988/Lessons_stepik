@@ -43,21 +43,5 @@ if __name__ == '__main__':
     m = int(input())
     list2 = [int(i) for i in input().split()]
     list2.sort()
-    p1 = 0
-    p2 = 0
-    count = 0
-    if n == 0 or m == 0:
-        print(count)
-    else:
-        while p1 < n and len(list2) != 0:
-            if abs(list1[p1] - list2[p2]) == 1 or abs(list1[p1] - list2[p2]) == 0:
-                del list2[p2]
-                p2 = 0
-                count += 1
-                p1 += 1
-            else:
-                p2 += 1
-                if p2 == len(list2):
-                    p1 += 1
-                    p2 = 0
-        print(count)
+    print(counter(list1, list2))
+
