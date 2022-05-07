@@ -6,6 +6,11 @@
 # Примечание
 # f(4)=-1+2-3+4=2
 # f(5)=-1+2-3+4-5=-3
+def sum_numbers(n):
+    if n % 2 == 0:
+        return n // 2
+    return n // (-2)
+
 
 if __name__ == '__main__':
     n = int(input())
