@@ -10,6 +10,11 @@
 # Примечание: для вывода результирующего списка вы можете использовать следующую конструкцию
 # print(*result) # где result - итоговый список
 def merge_two_sotr_list(list1: list, list2: list) -> list:
+    """
+    :param list1: first sorted list
+    :param list2: second sorted list
+    :return: sorted list = list1 + list2
+    """
     result = []
     p1 = 0
     p2 = 0
