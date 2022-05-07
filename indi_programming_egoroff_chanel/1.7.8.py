@@ -6,12 +6,15 @@
 def get_days(n: int) -> int:
     return n // (24 * 60)
 
+
 def get_hours(n: int) -> int:
     return (n - get_days(n) * 24 * 60) // 60
 
-n = int(input())
+
+def get_minuties(n: int) -> int:
+    return (n - get_days(n) * 24 * 60) % 60
+
+
 if __name__ == '__main__':
-    days = n // (24 * 60)
-    hours = (n - days * 24 * 60) // 60
-    minuties = (n - days * 24 * 60) % 60
-    print(hours, minuties)
+    n = int(input())
+    print(get_hours(n), get_minuties(n))
