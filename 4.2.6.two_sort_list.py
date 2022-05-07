@@ -46,4 +46,5 @@ if __name__ == '__main__':
     if p2 < len(list2):
         result += list2[p2:]
     print(*result)
+    print(*merge_two_sotr_list(list1, list2))
 
