@@ -14,27 +14,34 @@
 # Решение youtube patreon boosty
 # Примечание
 # В первом примере можно сочетать к примеру так 1-1, 4-5, 6-7 либо 2-1, 4-5, 6-7. В любом случае можно составить только три пары
-
-n = int(input())
-list1 = [int(i) for i in input().split()]
-m = int(input())
-list2 = [int(i) for i in input().split()]
-list2.sort()
-p1 = 0
-p2 = 0
-count = 0
-if n == 0 or m == 0:
-    print(count)
-else:
-    while p1 < n and len(list2) != 0:
-        if abs(list1[p1] - list2[p2]) == 1 or abs(list1[p1] - list2[p2]) == 0:
-            del list2[p2]
-            p2 = 0
-            count += 1
-            p1 += 1
-        else:
-            p2 += 1
-            if p2 == len(list2):
-                p1 += 1
+def counter(list1: list, list2: list) -> int:
+    n = len(list1)
+    m = len(list2)
+    p1 = 0
+    p2 = 0
+    count = 0
+    if n == 0 or m == 0:
+        return count
+    else:
+        while p1 < n and len(list2) != 0:
+            if abs(list1[p1] - list2[p2]) == 1 or abs(list1[p1] - list2[p2]) == 0:
+                del list2[p2]
                 p2 = 0
-    print(count)
+                count += 1
+                p1 += 1
+            else:
+                p2 += 1
+                if p2 == len(list2):
+                    p1 += 1
+                    p2 = 0
+        return count
+
+
+if __name__ == '__main__':
+    n = int(input())
+    list1 = [int(i) for i in input().split()]
+    m = int(input())
+    list2 = [int(i) for i in input().split()]
+    list2.sort()
+    print(counter(list1, list2))
+
