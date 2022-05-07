@@ -5,13 +5,12 @@
 # Программа получает на вход одно целое число N (0 ≤ N < 106) и должна вывести «YES», если билет с номером N
 # счастливый и «NO» в противном случае.
 def get_happy_ticket(num: str) -> bool:
-    if len(num) < 6:
+    if len(num) <= 6:
         num = '0' * (6 - len(num)) + num
         return sum(map(int, num[:3])) == sum(map(int, num[3:]))
     return False
 
+
 if __name__ == '__main__':
     num = input()
-    if len(num) < 6:
-        num = '0' * (6 - len(num)) + num
-    print(('NO', 'YES')[sum(map(int, num[:3])) == sum(map(int, num[3:]))])
+    print(('NO', 'YES')[get_happy_ticket(num)])
