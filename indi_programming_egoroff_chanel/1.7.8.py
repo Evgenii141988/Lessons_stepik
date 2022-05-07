@@ -11,10 +11,10 @@ def get_hours(n: int) -> int:
     return (n - get_days(n) * 24 * 60) // 60
 
 
-def get_minuties(n: int) -> int:
+def get_minutes(n: int) -> int:
     return (n - get_days(n) * 24 * 60) % 60
 
 
 if __name__ == '__main__':
     n = int(input())
-    print(get_hours(n), get_minuties(n))
+    print(get_hours(n), get_minutes(n))
