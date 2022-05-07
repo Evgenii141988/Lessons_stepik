@@ -6,6 +6,8 @@
 def get_days(n: int) -> int:
     return n // (24 * 60)
 
+def get_hours(n: int) -> int:
+    return (n - get_days(n) * 24 * 60) // 60
 
 n = int(input())
 if __name__ == '__main__':
