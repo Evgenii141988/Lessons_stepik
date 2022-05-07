@@ -7,8 +7,9 @@
 # f(4)=-1+2-3+4=2
 # f(5)=-1+2-3+4-5=-3
 
-n = int(input())
-if n % 2 == 0:
-    print(n // 2)
-else:
-    print(n // (-2))
+if __name__ == '__main__':
+    n = int(input())
+    if n % 2 == 0:
+        print(n // 2)
+    else:
+        print(n // (-2))
