@@ -14,9 +14,4 @@ def sum_numbers(n):
 
 if __name__ == '__main__':
     n = int(input())
-    if n % 2 == 0:
-        print(n // 2)
-    else:
-        print(n // (-2))
-
     print(sum_numbers(n))
