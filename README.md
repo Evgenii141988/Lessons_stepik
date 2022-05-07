@@ -1,2 +1,3 @@
 # Lessons_stepik
 Репозиторий для решенных задач курсов по Python stepik.org
+1. indi_programming_egoroff_chanel - задачи из курса "Инди-курс программирования на Python от egoroff_channel"
