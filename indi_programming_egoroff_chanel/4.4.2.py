@@ -1,7 +1,6 @@
 # Программа получает на вход натуральное число N.
 # Нужно найти сумму его делителей.
 def get_sum_del(n):
-    n = int(input())
     total = 0
     i = 1
     while i * i <= n:
@@ -28,3 +27,4 @@ if __name__ == '__main__':
                 total += n // i
         i += 1
     print(total)
+    print(get_sum_del(n))
