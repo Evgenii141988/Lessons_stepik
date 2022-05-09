@@ -1,10 +1,9 @@
 import time
-
 # webdriver это и есть набор команд для управления браузером
 from selenium import webdriver
 
 # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path=r'C:\PyProjects\stepik_courses\test_automation_Selenium_Python\chromedriver\chromedriver.exe')
 
 # команда time.sleep устанавливает паузу в 5 секунд, чтобы мы успели увидеть, что происходит в браузере
 time.sleep(5)
