@@ -1,10 +1,11 @@
 import time
 # webdriver это и есть набор команд для управления браузером
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 if __name__ == '__main__':
 
     # инициализируем драйвер браузера. После этой команды вы должны увидеть новое открытое окно браузера
-    driver = webdriver.Chrome(executable_path=r'C:\PyProjects\stepik_courses\test_automation_Selenium_Python\chromedriver\chromedriver.exe')
+    driver = webdriver.Chrome()
 
     # команда time.sleep устанавливает паузу в 5 секунд, чтобы мы успели увидеть, что происходит в браузере
     time.sleep(5)
@@ -14,14 +15,16 @@ if __name__ == '__main__':
         time.sleep(5)
         # Метод find_element_by_css_selector позволяет найти нужный элемент на сайте, указав путь к нему. Способы поиска элементов мы обсудим позже
         # Ищем поле для ввода текста
-        textarea = driver.find_element_by_css_selector(".textarea")
+        # textarea = driver.find_element_by_css_selector(".textarea")
+        textarea = driver.find_element(by=By.CSS_SELECTOR, value=".textarea")
 
         # Напишем текст ответа в найденное поле
         textarea.send_keys("get()")
         time.sleep(5)
 
         # Найдем кнопку, которая отправляет введенное решение
-        submit_button = driver.find_element_by_css_selector(".submit-submission")
+        # submit_button = driver.find_element_by_css_selector(".submit-submission")
+        submit_button = driver.find_element(by=By.CSS_SELECTOR, value=".submit-submission")
 
         # Скажем драйверу, что нужно нажать на кнопку. После этой команды мы должны увидеть сообщение о правильном ответе
         submit_button.click()
