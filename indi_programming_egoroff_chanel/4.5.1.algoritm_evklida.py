@@ -1,6 +1,6 @@
 # Даны два натуральных числа A и B. Требуется найти их наибольший общий делитель (НОД) методом вычитания
 
-def get_nod(a, b):
+def get_nod(a: int, b: int) -> int:
     while a != b:
         if a > b:
             a -= b
@@ -13,4 +13,3 @@ if __name__ == '__main__':
     # a, b = [int(i) for i in input().split()]
     assert get_nod(77, 22) == 11
     assert get_nod(5, 7) == 1
-
