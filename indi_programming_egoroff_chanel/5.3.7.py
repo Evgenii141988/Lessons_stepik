@@ -18,3 +18,10 @@ def check_correct_bracket_sequence(string: str) -> str:
 
 if __name__ == '__main__':
     # string = input()
+    assert check_correct_bracket_sequence('[]') == 'YES'
+    assert check_correct_bracket_sequence('[(])') == 'NO'
+    assert check_correct_bracket_sequence('({[]}())') == 'YES'
+    assert check_correct_bracket_sequence('{[{]}(})') == 'NO'
+    assert check_correct_bracket_sequence('[](){}') == 'YES'
+    assert check_correct_bracket_sequence('{[]}([)]') == 'NO'
+
