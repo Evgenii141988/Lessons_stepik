@@ -7,14 +7,15 @@
 # Если A – правильная скобочная последовательность, то (A), [A] и {A} – правильные скобочные последовательности.
 # Если A и B – правильные скобочные последовательности, то AB – правильная скобочная последовательность.
 # Если введенная строка является ПСП, выведите YES, в противном случае - NO.
+if __name__ == '__main__':
 
-strings = ['()', '{}', '[]']
-string = input()
-new_string = ''
-for s in string:
-    new_string += s
-    if len(new_string) > 1 and new_string[-2:] in strings:
-        new_string = new_string[:-2]
-    # print(new_string)
+    strings = ['()', '{}', '[]']
+    string = input()
+    new_string = ''
+    for s in string:
+        new_string += s
+        if len(new_string) > 1 and new_string[-2:] in strings:
+            new_string = new_string[:-2]
+        # print(new_string)
 
-print(('NO', 'YES')[len(new_string) == 0])
+    print(('NO', 'YES')[len(new_string) == 0])
