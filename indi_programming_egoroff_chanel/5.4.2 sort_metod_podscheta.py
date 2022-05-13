@@ -4,13 +4,18 @@
 # Программа получает на вход число n - количество элементов в списке, затем сами элементы списка
 # Вам необходимо вывести отсортированный список
 # P.S. не пользуйтесь встроенной функцией sorted или методом sort
-if __name__ == '__main__':
-    n = int(input())
-    numbers = [int(i) for i in input().split()]
+def get_sort_list(nums: str) -> list:
+    numbers = [int(i) for i in nums.split()]
     sort_numbers = [0] * 201
+    result = []
     for num in numbers:
         sort_numbers[num + 100] += 1
-    for i in range(len(sort_numbers)):
-        if sort_numbers[i] > 0:
-            for _ in range(sort_numbers[i]):
-                print(i - 100, end=' ')
+    for i, elem in enumerate(sort_numbers):
+        if elem > 0:
+            for _ in range(elem):
+                result.append(i - 100)
+    return result
+
+
+if __name__ == '__main__':
+
