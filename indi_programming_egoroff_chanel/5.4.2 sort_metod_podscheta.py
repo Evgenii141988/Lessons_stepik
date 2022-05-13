@@ -18,4 +18,7 @@ def get_sort_list(nums: str) -> list:
 
 
 if __name__ == '__main__':
+    assert get_sort_list('8 9 8 7 2') == [2, 7, 8, 8, 9]
+    assert get_sort_list('-8 5 -7 4 -8 0 4') == [-8, -8, -7, 0, 4, 4, 5]
+    assert get_sort_list('66 -66 -48 -96 -17 -80 -57 -45') == [-96, -80, -66, -57, -48, -45, -17, 66]
 
