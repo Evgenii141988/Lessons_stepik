@@ -5,7 +5,7 @@
 # Вам необходимо вывести отсортированный список
 # P.S. не пользуйтесь встроенной функцией sorted или методом sort
 def get_sort_list(nums: str) -> list:
-    numbers = [int(i) for i in nums.split()]
+    numbers = (int(i) for i in nums.split())
     sort_numbers = [0] * 201
     result = []
     for num in numbers:
