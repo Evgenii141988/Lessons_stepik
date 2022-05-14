@@ -10,8 +10,7 @@
 # Программа принимает на вход целое число n (2 ≤ n ≤ 50000).
 # Выходные данные
 # Вам необходимо вывести на экран одно число – количество простых чисел p на интервале  n < p < 2n.
-if __name__ == '__main__':
-    n = int(input())
+def count_simple_num(n):
     count = 0
     index = 0
     for i in range(n + 1, 2 * n):
@@ -25,4 +24,8 @@ if __name__ == '__main__':
             index = 0
         else:
             count += 1
-    print(count)
+    return count
+
+if __name__ == '__main__':
+    n = int(input())
+    print(count_simple_num(n))
