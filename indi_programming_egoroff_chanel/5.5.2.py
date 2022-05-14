@@ -27,5 +27,7 @@ def count_simple_num(n):
     return count
 
 if __name__ == '__main__':
-    n = int(input())
-    print(count_simple_num(n))
+    assert count_simple_num(2) == 1
+    assert count_simple_num(4) == 2
+    assert count_simple_num(7) == 2
+    assert count_simple_num(11) == 3
