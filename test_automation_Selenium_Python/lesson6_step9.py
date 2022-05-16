@@ -17,6 +17,12 @@ if __name__ == '__main__':
         button = brawser.find_element(By.CSS_SELECTOR, 'button.btn')
         button.click()
 
+        # Проверяем, что смогли зарегистрироваться
+        # ждем загрузки страницы
+        time.sleep(1)
+
+        welcome_text_elm = brawser.find_element(By.TAG_NAME, 'h1')
+
     except Exception as ex:
         print(ex)
     finally:
