@@ -14,6 +14,9 @@ if __name__ == '__main__':
         input_email = brawser.find_element(By.CLASS_NAME, 'third')
         input_email.send_keys('ivan_ivanov@mail.ru')
 
+        button = brawser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button.click()
+
     except Exception as ex:
         print(ex)
     finally:
