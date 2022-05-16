@@ -13,6 +13,9 @@ if __name__ == '__main__':
         input2.send_keys('Petrov')
         input3 = browser.find_element(By.CLASS_NAME, 'city')
         input3.send_keys('Smolensk')
+        input4 = browser.find_element(By.ID, 'country')
+        input4.send_keys('Russia')
+
     except Exception as ex:
         print(ex)
     finally:
