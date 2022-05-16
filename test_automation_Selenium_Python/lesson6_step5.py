@@ -5,7 +5,7 @@ import time
 
 if __name__ == '__main__':
 
-    link = "http://suninjuly.github.io/simple_form_find_task.html"
+    link = "http://suninjuly.github.io/find_link_text"
 
     try:
         browser = webdriver.Chrome()
