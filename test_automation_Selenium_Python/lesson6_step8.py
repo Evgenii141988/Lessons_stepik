@@ -11,6 +11,8 @@ if __name__ == '__main__':
         input1.send_keys('Ivan')
         input2 = browser.find_element(By.NAME, 'last_name')
         input2.send_keys('Petrov')
+        input3 = browser.find_element(By.CLASS_NAME, 'city')
+        input3.send_keys('Smolensk')
     except Exception as ex:
         print(ex)
     finally:
