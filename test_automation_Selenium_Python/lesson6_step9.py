@@ -27,8 +27,6 @@ if __name__ == '__main__':
 
         # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
         assert "Congratulations! You have successfully registered!" == welcome_text
-
-
     finally:
         time.sleep(10)
         brawser.quit()
