@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 if __name__ == '__main__':
-    link = 'http://suninjuly.github.io/registration2.html'
+    link = 'http://suninjuly.github.io/registration1.html'
     brawser = webdriver.Chrome()
     brawser.get(link)
     try:
@@ -28,8 +28,7 @@ if __name__ == '__main__':
         # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
         assert "Congratulations! You have successfully registered!" == welcome_text
 
-    except Exception:
-        print("NoSuchElementException")
+
     finally:
         time.sleep(10)
         brawser.quit()
