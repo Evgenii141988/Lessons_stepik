@@ -11,6 +11,8 @@ if __name__ == '__main__':
         input_first_name.send_keys('Ivan')
         input_last_name = brawser.find_element(By.CLASS_NAME, 'second')
         input_last_name.send_keys('Ivanov')
+        input_email = brawser.find_element(By.CLASS_NAME, 'third')
+        input_email.send_keys('ivan_ivanov@mail.ru')
 
     except Exception as ex:
         print(ex)
