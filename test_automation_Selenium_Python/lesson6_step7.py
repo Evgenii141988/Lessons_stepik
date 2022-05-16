@@ -9,7 +9,7 @@ try:
     for element in elements:
         element.send_keys("Мой ответ")
 
-    button = browser.find_element_by_css_selector("button.btn")
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
 finally:
