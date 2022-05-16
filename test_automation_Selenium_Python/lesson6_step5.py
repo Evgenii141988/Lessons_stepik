@@ -11,7 +11,8 @@ if __name__ == '__main__':
     try:
         browser = webdriver.Chrome()
         browser.get(link)
-
+        new_link = browser.find_element(by=By.LINK_TEXT, value=text_link)
+        new_link.click()
         input1 = browser.find_element(by=By.TAG_NAME, value="input")
         input1.send_keys("Ivan")
         input2 = browser.find_element(by=By.NAME, value="last_name")
