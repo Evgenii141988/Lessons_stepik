@@ -1,15 +1,18 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+import math
 import time
 
 if __name__ == '__main__':
 
-    link = "http://suninjuly.github.io/simple_form_find_task.html"
+    link = "http://suninjuly.github.io/find_link_text"
+    text_link = str(math.ceil(math.pow(math.pi, math.e) * 10000))
 
     try:
         browser = webdriver.Chrome()
         browser.get(link)
-
+        new_link = browser.find_element(by=By.LINK_TEXT, value=text_link)
+        new_link.click()
         input1 = browser.find_element(by=By.TAG_NAME, value="input")
         input1.send_keys("Ivan")
         input2 = browser.find_element(by=By.NAME, value="last_name")
