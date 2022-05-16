@@ -9,8 +9,10 @@ if __name__ == '__main__':
         browser.get(link)
         input1 = browser.find_element(By.TAG_NAME, 'input')
         input1.send_keys('Ivan')
+        input2 = browser.find_element(By.NAME, 'last_name')
+        input2.send_keys('Petrov')
     except Exception as ex:
         print(ex)
     finally:
-        time.sleep(30)
+        time.sleep(10)
         browser.quit()
