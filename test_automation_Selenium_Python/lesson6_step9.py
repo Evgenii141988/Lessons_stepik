@@ -7,7 +7,8 @@ if __name__ == '__main__':
     brawser = webdriver.Chrome()
     brawser.get(link)
     try:
-        pass
+        input1 = brawser.find_element(By.CLASS_NAME, 'first')
+        input1.send_keys('Ivan')
     except Exception as ex:
         print(ex)
     finally:
