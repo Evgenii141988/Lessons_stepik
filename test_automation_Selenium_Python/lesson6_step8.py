@@ -15,7 +15,7 @@ if __name__ == '__main__':
         input3.send_keys('Smolensk')
         input4 = browser.find_element(By.ID, 'country')
         input4.send_keys('Russia')
-        button = browser.find_element(By.XPATH, )
+        button = browser.find_element(By.XPATH, '//button[text()="Submit"]')
         button.click()
     except Exception as ex:
         print(ex)
