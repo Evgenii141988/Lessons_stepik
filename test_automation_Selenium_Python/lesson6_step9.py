@@ -9,6 +9,8 @@ if __name__ == '__main__':
     try:
         input1 = brawser.find_element(By.CLASS_NAME, 'first')
         input1.send_keys('Ivan')
+        input2 = brawser.find_element(By.CLASS_NAME, 'second')
+        input2.send_keys('Ivanov')
     except Exception as ex:
         print(ex)
     finally:
