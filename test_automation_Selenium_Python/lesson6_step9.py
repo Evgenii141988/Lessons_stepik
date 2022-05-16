@@ -26,6 +26,9 @@ if __name__ == '__main__':
         # записываем в переменную welcome_text текст из элемента welcome_text_elt
         welcome_text = welcome_text_elm.text
 
+        # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
+        assert "Congratulations! You have successfully registered!" == welcome_text
+
     except Exception as ex:
         print(ex)
     finally:
