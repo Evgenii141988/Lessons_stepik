@@ -8,4 +8,6 @@ def calc(x: int) -> str:
 
 
 if __name__ == '__main__':
-    pass
+    browser = webdriver.Chrome()
+    link = 'http://suninjuly.github.io/math.html'
+    browser.get(link)
