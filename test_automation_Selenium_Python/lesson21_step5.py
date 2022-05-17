@@ -17,6 +17,8 @@ if __name__ == '__main__':
         y = calc(x)
         input_text = browser.find_element(By.CSS_SELECTOR, '#answer')
         input_text.send_keys(y)
+        my_checkbox = browser.find_element(By.CSS_SELECTOR, '#robotCheckbox')
+        my_checkbox.click()
     except Exception as ex:
         print(ex)
     finally:
