@@ -8,11 +8,16 @@ def calc(x: str) -> str:
 
 
 if __name__ == '__main__':
-    browser = webdriver.Chrome()
-    link = 'http://suninjuly.github.io/math.html'
-    browser.get(link)
-    x_element = browser.find_element(By.CSS_SELECTOR, '#input_value')
-    x = x_element.text
-    y = calc(x)
-    input_text = browser.find_element(By.CSS_SELECTOR, '#answer')
-    input_text.send_keys(y)
+    try:
+        browser = webdriver.Chrome()
+        link = 'http://suninjuly.github.io/math.html'
+        browser.get(link)
+        x_element = browser.find_element(By.CSS_SELECTOR, '#input_value')
+        x = x_element.text
+        y = calc(x)
+        input_text = browser.find_element(By.CSS_SELECTOR, '#answer')
+        input_text.send_keys(y)
+    except Exception as ex:
+        print(ex)
+    finally:
+        browser.quit()
