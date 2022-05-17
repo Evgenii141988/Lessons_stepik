@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 import math
 import time
 
+
 def calc(x: str) -> str:
     return str(math.log(abs(12 * math.sin(int(x)))))
 
@@ -21,7 +22,7 @@ if __name__ == '__main__':
         my_checkbox.click()
         my_radiobutton = browser.find_element(By.CSS_SELECTOR, '#robotsRule')
         my_radiobutton.click()
-        button = browser.find_element(By.CLASS_NAME, 'button.btn')
+        button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
         button.click()
     except Exception as ex:
         print(ex)
