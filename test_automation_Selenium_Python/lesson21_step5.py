@@ -19,6 +19,8 @@ if __name__ == '__main__':
         input_text.send_keys(y)
         my_checkbox = browser.find_element(By.CSS_SELECTOR, '#robotCheckbox')
         my_checkbox.click()
+        my_radiobutton = browser.find_element(By.CSS_SELECTOR, '#robotsRule')
+        my_radiobutton.click()
     except Exception as ex:
         print(ex)
     finally:
