@@ -9,5 +9,7 @@ if __name__ == '__main__':
         browser = webdriver.Chrome()
         link = 'http://suninjuly.github.io/selects1.html'
         browser.get(link)
+        num_a = browser.find_element(By.ID, 'num1')
+        a = int(num_a.text)
     finally:
         time.sleep(10)
