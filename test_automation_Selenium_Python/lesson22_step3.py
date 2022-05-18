@@ -16,6 +16,8 @@ if __name__ == '__main__':
         total = a + b
         select = Select(browser.find_element(By.ID, 'dropdown'))
         select.select_by_visible_text(str(total))
+        button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button.click()
     finally:
         time.sleep(10)
         browser.quit()
