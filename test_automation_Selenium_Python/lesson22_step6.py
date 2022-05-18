@@ -19,8 +19,9 @@ if __name__ == '__main__':
         y = calc(x)
         input_y = browser.find_element(By.ID, 'answer')
         input_y.send_keys(y)
-
         button = browser.find_element(By.TAG_NAME, 'button')
+        browser.execute_script("return arguments[0].scrollIntoView(true);", button)
+
         button.click()
     except Exception as ex:
         print(ex)
