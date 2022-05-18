@@ -24,7 +24,8 @@ if __name__ == '__main__':
         # print(os.path.abspath(__file__))
         # print(os.path.abspath(os.path.dirname(__file__)))
         # print(file_path)
-        
+        elem_choise = browser.find_element(By.ID, 'file')
+        elem_choise.send_keys(file_path)
 
         button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
         button.click()
