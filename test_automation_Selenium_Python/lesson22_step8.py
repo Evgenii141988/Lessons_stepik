@@ -12,5 +12,10 @@ if __name__ == '__main__':
 
         input_first_name = browser.find_element(By.NAME, 'firstname')
         input_first_name.send_keys('Ivan')
+
+        input_last_name = browser.find_element(By.NAME, 'lastname')
+        input_last_name.send_keys('Ivanov')
+
     finally:
         time.sleep(10)
+        browser.quit()
