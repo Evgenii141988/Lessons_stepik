@@ -25,6 +25,9 @@ if __name__ == '__main__':
         chech_box = browser.find_element(By.ID, 'robotCheckbox')
         chech_box.click()
 
+        rad_btn = browser.find_element(By.ID, 'robotsRule')
+        rad_btn.click()
+
         button.click()
     except Exception as ex:
         print(ex)
