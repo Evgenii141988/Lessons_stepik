@@ -17,6 +17,8 @@ if __name__ == '__main__':
         x_elem = browser.find_element(By.ID, 'input_value')
         x = x_elem.text
         y = calc(x)
+        input_y = browser.find_element(By.ID, 'answer')
+        input_y.send_keys(y)
 
         button = browser.find_element(By.TAG_NAME, 'button')
         button.click()
