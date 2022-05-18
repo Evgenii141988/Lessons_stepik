@@ -22,6 +22,9 @@ if __name__ == '__main__':
         button = browser.find_element(By.TAG_NAME, 'button')
         browser.execute_script("return arguments[0].scrollIntoView(true);", button)
 
+        chech_box = browser.find_element(By.ID, 'robotCheckbox')
+        chech_box.click()
+
         button.click()
     except Exception as ex:
         print(ex)
