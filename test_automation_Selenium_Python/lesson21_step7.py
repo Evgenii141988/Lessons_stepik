@@ -15,7 +15,9 @@ if __name__ == '__main__':
         browser.get(link)
         x_elem = browser.find_element(By.ID, 'treasure')
         x = x_elem.get_attribute('valuex')
-        print(type(x))
+        y = calc(x)
+        input_y = browser.find_element(By.ID, 'answer')
+        input_y.send_keys(y)
     finally:
         time.sleep(10)
         browser.quit()
