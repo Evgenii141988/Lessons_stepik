@@ -11,5 +11,8 @@ if __name__ == '__main__':
         browser.get(link)
         num_a = browser.find_element(By.ID, 'num1')
         a = int(num_a.text)
+        num_b = browser.find_element(By.ID, 'num2')
+        b = int(num_b.text)
+
     finally:
         time.sleep(10)
