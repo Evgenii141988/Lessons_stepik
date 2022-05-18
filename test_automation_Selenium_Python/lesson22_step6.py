@@ -14,6 +14,10 @@ if __name__ == '__main__':
         link = "http://suninjuly.github.io/execute_script.html"
         browser.get(link)
 
+        x_elem = browser.find_element(By.ID, 'input_value')
+        x = x_elem.text
+        y = calc(x)
+
         button = browser.find_element(By.TAG_NAME, 'button')
         button.click()
     except Exception as ex:
