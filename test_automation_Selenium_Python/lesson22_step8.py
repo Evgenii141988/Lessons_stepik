@@ -19,6 +19,12 @@ if __name__ == '__main__':
         input_email = browser.find_element(By.NAME, 'email')
         input_email.send_keys('email@mail.ru')
 
+        current_dir = os.path.abspath(os.path.dirname(__file__))
+        file_path = os.path.join(current_dir, 'new_file.txt')
+        # print(os.path.abspath(__file__))
+        # print(os.path.abspath(os.path.dirname(__file__)))
+        # print(file_path)
+        
 
         button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
         button.click()
