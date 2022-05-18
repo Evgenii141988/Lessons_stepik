@@ -9,8 +9,9 @@ if __name__ == '__main__':
         link = "https://SunInJuly.github.io/execute_script.html"
         browser.get(link)
         button = browser.find_element(By.TAG_NAME, 'button')
-    # except Exception as ex:
-    #     print(ex)
+        button.click()
+    except Exception as ex:
+        print(ex)
     finally:
         time.sleep(10)
         browser.quit()
