@@ -20,6 +20,8 @@ if __name__ == '__main__':
         input_y.send_keys(y)
         chech_box = browser.find_element(By.ID, 'robotCheckbox')
         chech_box.click()
+        rd_btn = browser.find_element(By.ID, 'robotsRule')
+        rd_btn.click()
 
     finally:
         time.sleep(10)
