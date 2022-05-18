@@ -22,7 +22,8 @@ if __name__ == '__main__':
         chech_box.click()
         rd_btn = browser.find_element(By.ID, 'robotsRule')
         rd_btn.click()
-
+        button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button.click()
     finally:
         time.sleep(10)
         browser.quit()
