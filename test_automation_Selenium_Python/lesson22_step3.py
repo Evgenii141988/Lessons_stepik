@@ -13,7 +13,9 @@ if __name__ == '__main__':
         a = int(num_a.text)
         num_b = browser.find_element(By.ID, 'num2')
         b = int(num_b.text)
-
+        total = a + b
+        select = Select(browser.find_element(By.ID, 'dropdown'))
+        select.select_by_visible_text(str(total))
     finally:
         time.sleep(10)
         browser.quit()
