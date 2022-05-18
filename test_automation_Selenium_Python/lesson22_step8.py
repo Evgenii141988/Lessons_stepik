@@ -16,6 +16,9 @@ if __name__ == '__main__':
         input_last_name = browser.find_element(By.NAME, 'lastname')
         input_last_name.send_keys('Ivanov')
 
+        input_email = browser.find_element(By.NAME, 'email')
+        input_email.send_keys('email@mail.ru')
+
     finally:
         time.sleep(10)
         browser.quit()
