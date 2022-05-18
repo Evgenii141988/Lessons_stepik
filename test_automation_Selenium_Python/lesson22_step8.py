@@ -19,6 +19,10 @@ if __name__ == '__main__':
         input_email = browser.find_element(By.NAME, 'email')
         input_email.send_keys('email@mail.ru')
 
+
+        button = browser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button.click()
+
     finally:
         time.sleep(10)
         browser.quit()
