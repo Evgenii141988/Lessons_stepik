@@ -18,6 +18,9 @@ if __name__ == '__main__':
         y = calc(x)
         input_y = browser.find_element(By.ID, 'answer')
         input_y.send_keys(y)
+        chech_box = browser.find_element(By.ID, 'robotCheckbox')
+        chech_box.click()
+
     finally:
         time.sleep(10)
         browser.quit()
