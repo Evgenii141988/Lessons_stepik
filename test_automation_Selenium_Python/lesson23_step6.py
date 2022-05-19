@@ -24,6 +24,8 @@ if __name__ == '__main__':
         x = x_elm.text
         y = calc(x)
 
+        input_answer = browser.find_element(By.ID, 'answer')
+        input_answer.send_keys(y)
 
     finally:
         time.sleep(10)
