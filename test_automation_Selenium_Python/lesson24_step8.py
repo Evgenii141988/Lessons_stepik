@@ -10,3 +10,4 @@ if __name__ == '__main__':
         browser.get('http://suninjuly.github.io/explicit_wait2.html')
     finally:
         time.sleep(10)
+        browser.quit()
