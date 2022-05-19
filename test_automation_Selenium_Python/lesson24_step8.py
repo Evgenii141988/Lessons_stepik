@@ -26,6 +26,8 @@ if __name__ == '__main__':
         input_y = browser.find_element(By.ID, 'answer')
         input_y.send_keys(y)
 
+        button_submit = browser.find_element(By.ID, 'solve')
+        button_submit.click()
 
 
     finally:
