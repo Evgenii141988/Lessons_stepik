@@ -29,7 +29,6 @@ if __name__ == '__main__':
         button_submit = browser.find_element(By.ID, 'solve')
         button_submit.click()
 
-
     finally:
         time.sleep(10)
         browser.quit()
