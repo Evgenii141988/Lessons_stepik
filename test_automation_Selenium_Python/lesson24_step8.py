@@ -6,6 +6,7 @@ import time
 
 if __name__ == '__main__':
     try:
-        pass
+        browser = webdriver.Chrome()
+        browser.get('http://suninjuly.github.io/explicit_wait2.html')
     finally:
         time.sleep(10)
