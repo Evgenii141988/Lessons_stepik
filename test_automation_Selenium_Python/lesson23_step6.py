@@ -5,6 +5,8 @@ import math
 
 if __name__ == '__main__':
     try:
-        pass
+        browser = webdriver.Chrome()
+        link = 'http://suninjuly.github.io/redirect_accept.html'
+        browser.get(link)
     finally:
         time.sleep(10)
