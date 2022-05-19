@@ -12,6 +12,9 @@ if __name__ == '__main__':
         button_one = browser.find_element(By.CSS_SELECTOR, 'button.trollface')
         button_one.click()
 
+        new_window = browser.window_handles[1]
+        browser.switch_to.window(new_window)
+
     finally:
         time.sleep(10)
         browser.quit()
