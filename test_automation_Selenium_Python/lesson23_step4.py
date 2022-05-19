@@ -5,6 +5,9 @@ import time
 
 if __name__ == '__main__':
     try:
-        pass
+        browser = webdriver.Chrome()
+        link = 'http://suninjuly.github.io/alert_accept.html'
+        browser.get(link)
     finally:
         time.sleep(10)
+        browser.close()
