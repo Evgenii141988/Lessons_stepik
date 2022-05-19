@@ -23,10 +23,12 @@ if __name__ == '__main__':
         x_elm = browser.find_element(By.ID, 'input_value')
         x = x_elm.text
         y = calc(x)
-
+        time.sleep(1)
         input_pole = browser.find_element(By.ID, 'answer')
         input_pole.send_keys(y)
 
+        button_two = browser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button_two.click()
 
     finally:
         time.sleep(10)
