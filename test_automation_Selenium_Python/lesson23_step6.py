@@ -27,6 +27,9 @@ if __name__ == '__main__':
         input_answer = browser.find_element(By.ID, 'answer')
         input_answer.send_keys(y)
 
+        button_two = browser.find_element(By.CSS_SELECTOR, 'button.btn')
+        button_two.click()
+
     finally:
         time.sleep(10)
         browser.quit()
