@@ -8,6 +8,9 @@ if __name__ == '__main__':
     try:
         browser = webdriver.Chrome()
         browser.get('http://suninjuly.github.io/explicit_wait2.html')
+        browser.implicitly_wait(12)
+
+
     finally:
         time.sleep(10)
         browser.quit()
