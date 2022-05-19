@@ -8,7 +8,11 @@ if __name__ == '__main__':
     try:
         browser = webdriver.Chrome()
         browser.get('http://suninjuly.github.io/explicit_wait2.html')
-        browser.implicitly_wait(12)
+        flag = WebDriverWait(browser, 12).until(EC.text_to_be_present_in_element((By.ID, 'price'), '100'))
+        button_book = browser.find_element(By.ID, 'book')
+        if flag:
+            button_book.click()
+
 
 
     finally:
