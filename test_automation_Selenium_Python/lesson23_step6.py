@@ -20,6 +20,9 @@ if __name__ == '__main__':
         new_window = browser.window_handles[1]
         browser.switch_to.window(new_window)
 
+        x_elm = browser.find_element(By.ID, 'input_value')
+        x = x_elm.text
+        y = calc(x)
 
 
     finally:
