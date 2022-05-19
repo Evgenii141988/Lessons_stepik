@@ -3,6 +3,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import math
+
+def calc(x: str) -> str:
+    return str(math.log(abs(12 * math.sin(int(x)))))
 
 if __name__ == '__main__':
     try:
@@ -13,6 +17,9 @@ if __name__ == '__main__':
         if flag:
             button_book.click()
 
+        x_elm = browser.find_element(By.ID, 'input_value')
+        x = x_elm.text
+        y = calc(x)
 
 
     finally:
