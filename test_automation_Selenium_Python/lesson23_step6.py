@@ -3,6 +3,11 @@ from selenium.webdriver.common.by import By
 import time
 import math
 
+
+def calc(x: str) -> str:
+    return str(math.log(abs(12 * math.sin(int(x)))))
+
+
 if __name__ == '__main__':
     try:
         browser = webdriver.Chrome()
@@ -14,6 +19,8 @@ if __name__ == '__main__':
 
         new_window = browser.window_handles[1]
         browser.switch_to.window(new_window)
+
+
 
     finally:
         time.sleep(10)
