@@ -1,4 +1,3 @@
-import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -32,15 +31,7 @@ def input_data(link: str) -> str:
         browser.quit()
         return welcome_text
 
-class TestFormRegistration(unittest.TestCase):
-    def test_reg1(self):
-        self.assertEqual(input_data("http://suninjuly.github.io/registration1.html"),
-                         "Congratulations! You have successfully registered!")
-
-    def test_reg2(self):
-        self.assertEqual(input_data("http://suninjuly.github.io/registration2.html"),
-                         "Congratulations! You have successfully registered!")
-
 
 if __name__ == '__main__':
-    unittest.main()
+    link = "http://suninjuly.github.io/registration1.html"
+    input_data(link)
