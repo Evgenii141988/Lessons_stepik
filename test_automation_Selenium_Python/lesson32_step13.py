@@ -1,4 +1,4 @@
-import unittest
+from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -28,19 +28,14 @@ def input_data(link: str) -> str:
 
         # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
         # assert "Congratulations! You have successfully registered!" == welcome_text
-    finally:
-        browser.quit()
         return welcome_text
 
-class TestFormRegistration(unittest.TestCase):
-    def test_reg1(self):
-        self.assertEqual(input_data("http://suninjuly.github.io/registration1.html"),
-                         "Congratulations! You have successfully registered!")
-
-    def test_reg2(self):
-        self.assertEqual(input_data("http://suninjuly.github.io/registration2.html"),
-                         "Congratulations! You have successfully registered!")
+    except NoSuchElementException:
+        return f'Не найден элемент last_name'
+    finally:
+        browser.quit()
 
 
 if __name__ == '__main__':
-    unittest.main()
+    link = "http://suninjuly.github.io/registration2.html"
+    input_data(link)
