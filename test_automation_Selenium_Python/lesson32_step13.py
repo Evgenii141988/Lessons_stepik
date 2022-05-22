@@ -30,8 +30,8 @@ def input_data(link: str) -> str:
         # assert "Congratulations! You have successfully registered!" == welcome_text
         return welcome_text
 
-    except NoSuchElementException:
-        return f'Не найден элемент last_name'
+    # except NoSuchElementException:
+    #     return f'Не найден элемент last_name'
     finally:
         browser.quit()
 
