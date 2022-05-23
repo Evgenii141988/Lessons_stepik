@@ -33,6 +33,5 @@ class TestMainPage1():
         browser.find_element(By.CSS_SELECTOR, "input.btn.btn-default")
 
 
-
 if __name__ == '__main__':
     pytest.main()
