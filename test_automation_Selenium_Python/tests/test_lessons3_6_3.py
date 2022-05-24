@@ -5,13 +5,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import math
+# from test_automation_Selenium_Python.conftest import browser
 
 
-@pytest.fixture(scope='function')
-def browser():
-    driver = webdriver.Chrome()
-    yield driver
-    driver.quit()
+# @pytest.fixture(scope='function')
+# def browser():
+#     driver = webdriver.Chrome()
+#     yield driver
+#     driver.quit()
 
 
 final_answer = []
