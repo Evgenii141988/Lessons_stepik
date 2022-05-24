@@ -36,4 +36,5 @@ def test_get_answer(browser, link):
     text_answer = elem_with_text.text
     assert text_answer == "Correct!", 'Correct answer!!!'
 
-
+if __name__ == '__main__':
+    pytest.main()
