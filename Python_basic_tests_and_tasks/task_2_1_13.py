@@ -25,5 +25,8 @@ def get_sum_digits(num: int) -> int:
     digits = [int(i) for i in num_str]
     return sum(digits)
 
+
 if __name__ == '__main__':
-    pass
+    numbers = [int(i) for i in input().split()]
+    number = get_largest_simple_num(numbers)
+    print(get_index_num(numbers), get_sum_digits(number))
