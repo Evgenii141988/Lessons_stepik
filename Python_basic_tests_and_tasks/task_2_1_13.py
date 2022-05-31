@@ -4,13 +4,12 @@
 
 def get_largest_simple_num(numbers: list) -> int:
     largest_simple_num = 0
-    counter = 0
     for num in numbers:
+        counter = 0
         for i in range(2, num // 2 + 1):
             if num % i == 0:
                 counter += 1
             if counter == 1:
-                counter = 0
                 break
         if counter == 0 and num > largest_simple_num:
             largest_simple_num = num
