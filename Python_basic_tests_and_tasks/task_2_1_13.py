@@ -16,5 +16,9 @@ def get_largest_simple_num(numbers: list) -> int:
     return largest_simple_num
 
 
+def get_index_num(numbers: list) -> int:
+    return numbers.index(get_largest_simple_num(numbers))
+
+
 if __name__ == '__main__':
     pass
