@@ -13,14 +13,14 @@ def test_func_get_largest_simple_num(numbers, expected_result):
     assert get_largest_simple_num(numbers) == expected_result
 
 
-@pytest.mark.parametrize('numbers, expected_result', [([1, 2, 3, 5, 19], 4),
-                                                      ([3, 11, 7, 17, 6, 4, 19], 6),
-                                                      ([15, 4, 6, 9, 13, 89, 97, 25, 35, 124, 146], 6),
-                                                      ([2, 3, 5, 7, 13, 11, 37, 61, 71, 83, 79], 9),
-                                                      ([4, 6, 9, 15, 22, 44, 45, 35, 124, 146], -1),
-                                                      ])
-def test_func_get_index_num(numbers, expected_result):
-    assert get_index_num(numbers) == expected_result
+@pytest.mark.parametrize('numbers, number, expected_result', [([1, 2, 3, 5, 19], 19, 4),
+                                                              ([3, 11, 7, 17, 6, 4, 19], 19, 6),
+                                                              ([15, 4, 6, 9, 13, 89, 97, 25, 35, 124, 146], 97, 6),
+                                                              ([2, 3, 5, 7, 13, 11, 37, 61, 71, 83, 79], 83, 9),
+                                                              ([4, 6, 9, 15, 22, 44, 45, 35, 124, 146], 44, 5),
+                                                              ])
+def test_func_get_index_num(numbers, number, expected_result):
+    assert get_index_num(numbers, number) == expected_result
 
 
 @pytest.mark.parametrize('number, expected_result', [(1, 1), (19, 10), (142, 7), (35, 8), (20, 2)])
