@@ -20,5 +20,10 @@ def get_index_num(numbers: list) -> int:
     return numbers.index(get_largest_simple_num(numbers))
 
 
+def get_sum_digits(num: int) -> int:
+    num_str = str(num)
+    digits = [int(i) for i in num_str]
+    return sum(digits)
+
 if __name__ == '__main__':
     pass
