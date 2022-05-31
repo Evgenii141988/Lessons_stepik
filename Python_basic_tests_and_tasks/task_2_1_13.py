@@ -16,8 +16,8 @@ def get_largest_simple_num(numbers: list) -> int:
     return largest_simple_num
 
 
-def get_index_num(numbers: list) -> int:
-    return numbers.index(get_largest_simple_num(numbers))
+def get_index_num(numbers: list, number: int) -> int:
+    return numbers.index(number)
 
 
 def get_sum_digits(num: int) -> int:
@@ -29,4 +29,4 @@ def get_sum_digits(num: int) -> int:
 if __name__ == '__main__':
     numbers = [int(i) for i in input().split()]
     number = get_largest_simple_num(numbers)
-    print(get_index_num(numbers), get_sum_digits(number))
+    print(get_index_num(numbers, number), get_sum_digits(number))
