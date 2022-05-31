@@ -1,6 +1,6 @@
 import pytest
 
-from Python_basic_tests_and_tasks.task_2_1_13 import get_largest_simple_num, get_index_num
+from Python_basic_tests_and_tasks.task_2_1_13 import get_largest_simple_num, get_index_num, get_sum_digits
 
 
 @pytest.mark.parametrize('numbers, expected_result', [([1, 2, 3, 5, 19], 19),
@@ -21,6 +21,11 @@ def test_func_get_largest_simple_num(numbers, expected_result):
                                                       ])
 def test_func_get_index_num(numbers, expected_result):
     assert get_index_num(numbers) == expected_result
+
+
+@pytest.mark.parametrize('number, expected_result', [(1, 1), (19, 10), (142, 7), (35, 8), (20, 2)])
+def test_func_get_sum_digits(number, expected_result):
+    assert get_sum_digits(number) == expected_result
 
 
 if __name__ == '__main__':
