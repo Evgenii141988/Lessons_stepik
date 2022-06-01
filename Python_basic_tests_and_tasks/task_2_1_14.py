@@ -2,6 +2,7 @@
 # Напишите программу, которая находит самые ближайшие в списке числа и выводит
 # их на экран в порядке возрастания. Они не должны быть равны друг другу.
 def get_two_closest_nums(numbers: list) -> tuple:
+    numbers.sort()
     a = numbers[0]
     b = numbers[1]
     diff = b - a
@@ -13,5 +14,5 @@ def get_two_closest_nums(numbers: list) -> tuple:
 
 
 if __name__ == '__main__':
-    numbers = sorted([float(i) for i in input().split()])
+    numbers = [float(i) for i in input().split()]
     print(*get_two_closest_nums(numbers))
