@@ -24,3 +24,4 @@ def get_add_previous_numbers(nums: list) -> list:
 
 if __name__ == '__main__':
     numbers = [float(i) for i in input().split()]
+    print(*get_add_previous_numbers(get_squad_numbers(get_round_numbers(numbers))))
