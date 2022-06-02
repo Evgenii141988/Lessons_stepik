@@ -18,7 +18,7 @@ def get_add_previous_numbers(nums: list) -> list:
     box = 0
     for num in nums:
         result_numbers.append(num + box)
-        box = num
+        box += num
     return result_numbers
 
 
